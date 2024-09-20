@@ -4,9 +4,11 @@ import { FaTimes } from 'react-icons/fa';
 import { IoMenuSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
+type LanguageType = 'en' | 'id' | 'zh' | 'jp' | 'ko'; // Definisikan tipe
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for controlling menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
@@ -57,13 +59,6 @@ const Navbar = () => {
   };
 
   const classOptionNav = 'cursor-pointer font-semibold';
-  const handleScrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    setIsMenuOpen(false);
-  };
 
   return (
     <div className={`fixed top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-white shadow-lg text-black' : 'bg-gray-600 text-white'}`}>
@@ -73,8 +68,12 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-x-6">
-          <div className=" items-center gap-x-4">
-            <select value={language} onChange={(e) => setLanguage(e.target.value)} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
+          <div className="items-center gap-x-4">
+            <select
+              value={language}
+              onChange={(e) => setLanguage(e.target.value as LanguageType)} // Gunakan casting
+              className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer"
+            >
               <option value="en">English</option>
               <option value="id">Indonesia</option>
               <option value="zh">中文</option>
@@ -98,8 +97,13 @@ const Navbar = () => {
             <div className={classOptionNav}>{texts[language].contact_us}</div>
           </Link>
         </div>
+
         <div className="lg:hidden items-center gap-x-4">
-          <select value={language} onChange={(e) => setLanguage(e.target.value)} className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
+          <select
+            value={language}
+            onChange={(e) => setLanguage(e.target.value as LanguageType)} // Gunakan casting
+            className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer"
+          >
             <option value="en">English</option>
             <option value="id">Indonesia</option>
             <option value="zh">中文</option>
@@ -107,6 +111,7 @@ const Navbar = () => {
             <option value="ko">한국어</option>
           </select>
         </div>
+
         <button className="lg:hidden text-2xl" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <FaTimes /> : <IoMenuSharp size={30} />}
         </button>

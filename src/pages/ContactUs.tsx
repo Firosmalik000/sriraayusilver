@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaPhoneAlt, FaEnvelope, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { useLanguage } from '../hooks/UseLanguage';
 
