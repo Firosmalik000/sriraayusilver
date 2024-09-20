@@ -6,8 +6,10 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Gallery from './pages/Gallery';
+import useScrollToTop from './hooks/useScrollToTop';
 
 function App() {
+  useScrollToTop();
   return (
     <div>
       <Navbar />

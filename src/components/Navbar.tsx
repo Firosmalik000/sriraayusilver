@@ -117,30 +117,32 @@ const Navbar = () => {
         </button>
       </div>
 
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-gray-700 text-white flex flex-col items-center justify-center pt-16">
-          <div className="absolute top-4 right-4 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
-            <FaTimes size={30} />
-          </div>
-          <div className="flex flex-col gap-y-4 text-xl">
-            <Link to="/">
-              <div className={'text-center'}>{texts[language].home}</div>
-            </Link>
-            <Link to="/about-us">
-              <div className={'text-center'}>{texts[language].about_us}</div>
-            </Link>
-            <Link to="/tour">
-              <div className={'text-center'}>{texts[language].tour}</div>
-            </Link>
-            <Link to="/gallery">
-              <div className={'text-center'}>{texts[language].gallery}</div>
-            </Link>
-            <Link to="/contact-us">
-              <div className={'text-center'}>{texts[language].contact_us}</div>
-            </Link>
-          </div>
+      <div
+        className={`lg:hidden fixed inset-0 bg-gray-700 text-white flex flex-col items-center justify-center pt-16 transition-all duration-300 ease-in-out transform ${
+          isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+        } pointer-events-auto`}
+      >
+        <div className="absolute top-6 right-4 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+          <FaTimes size={30} />
         </div>
-      )}
+        <div className="flex flex-col gap-y-4 text-xl justify-center items-center">
+          <Link to="/">
+            <button onClick={() => setIsMenuOpen(false)}>{texts[language].home}</button>
+          </Link>
+          <Link to="/about-us">
+            <button onClick={() => setIsMenuOpen(false)}>{texts[language].about_us}</button>
+          </Link>
+          <Link to="/tour">
+            <button onClick={() => setIsMenuOpen(false)}>{texts[language].tour}</button>
+          </Link>
+          <Link to="/gallery">
+            <button onClick={() => setIsMenuOpen(false)}>{texts[language].gallery}</button>
+          </Link>
+          <Link to="/contact-us">
+            <button onClick={() => setIsMenuOpen(false)}>{texts[language].contact_us}</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

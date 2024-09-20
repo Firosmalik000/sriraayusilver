@@ -3,6 +3,7 @@ import HeroImage from '../../img/hero2.jpg';
 import HeroImage2 from '../../img/hero1.jpg';
 import HeroImage3 from '../../img/hero3.jpg';
 import HeroImage4 from '../../img/hero4.jpg';
+import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 
 const HomeHero = () => {
   const images = [HeroImage, HeroImage2, HeroImage3, HeroImage4];
@@ -30,11 +31,11 @@ const HomeHero = () => {
         backgroundSize: 'cover',
       }}
     >
-      <button className="absolute left-5 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-700 text-white rounded-md shadow-lg hover:bg-gray-600 transition duration-200" onClick={prevImage}>
-        Prev
+      <button className="absolute left-5 top-1/2 transform -translate-y-1/2 px-4 py-4 bg-black bg-opacity-50 text-white rounded-full shadow-lg hover:bg-gray-600 transition duration-200" onClick={prevImage}>
+        <GrFormPrevious />
       </button>
-      <button className="absolute right-5 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-700 text-white rounded-md shadow-lg hover:bg-gray-600 transition duration-200" onClick={nextImage}>
-        Next
+      <button className="absolute right-5 top-1/2 transform -translate-y-1/2 px-4 py-4 bg-black bg-opacity-50 text-white rounded-full shadow-lg hover:bg-gray-600 transition duration-200" onClick={nextImage}>
+        <GrFormNext />
       </button>
     </section>
   );
