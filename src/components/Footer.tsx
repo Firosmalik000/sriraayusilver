@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="border-t-2 py-6 px-[100px] bg-gray-700 text-white">
       <div className="max-w-screen-xl mx-auto text-center">
-        <p className="text-sm">PT Kevin Shipping {content[language]}</p>
+        <p className="text-sm">Sri Rahayu Silver {content[language]}</p>
       </div>
     </footer>
   );

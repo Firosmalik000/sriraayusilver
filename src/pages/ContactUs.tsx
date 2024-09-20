@@ -1,4 +1,3 @@
-
 import { FaPhoneAlt, FaEnvelope, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { useLanguage } from '../hooks/UseLanguage';
 
@@ -35,30 +34,32 @@ const ContactUs = () => {
 
   return (
     <>
-      <div className="pt-[200px] pb-10 flex items-center justify-center gap-12 bg-gray-200">
-        <div className="flex flex-col w-[300px] gap-4">
-          <p className="font-playfair text-4xl font-semibold text-end">{content[language].title}</p>
-          <p className="text-gray-700 text-end">{content[language].description}</p>
+      <div className="pt-[200px] pb-20 flex flex-col md:flex-row items-center justify-center gap-12 bg-gray-200">
+        {/* Contact Info Section */}
+        <div className="flex flex-col w-full max-w-md px-6 gap-4">
+          <p className="font-playfair text-4xl font-semibold text-center md:text-end">{content[language].title}</p>
+          <p className="text-gray-700 text-center md:text-end">{content[language].description}</p>
           <a href="https://wa.me/+6283832050948" target="_blank" rel="noopener noreferrer">
             <div className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold h-12 flex items-center justify-center rounded-lg shadow-md transition-all">{content[language].whatsapp}</div>
           </a>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center text-lg font-medium">
+        {/* Contact Details Section */}
+        <div className="flex flex-col gap-4 w-full max-w-md px-6 ">
+          <div className="flex items-center text-lg font-medium justify-center md:justify-start">
             <FaPhoneAlt className="text-gray-700 mr-2" />
             <p className="text-gray-700">+62 838-3205-0948</p>
           </div>
-          <div className="flex items-center text-lg font-medium">
+          <div className="flex items-center text-lg font-medium justify-center md:justify-start">
             <FaEnvelope className="text-gray-700 mr-2" />
             <p className="text-gray-700">srirahayusilverjewelry@gmail.com</p>
           </div>
           <div className="flex flex-col gap-2">
-            <div className="flex items-center text-lg font-medium">
+            <div className="flex items-center text-lg font-medium justify-center md:justify-start">
               <FaInstagram className="text-gray-700 mr-2" />
               <p className="text-gray-700">@srirahayusilver</p>
             </div>
-            <div className="flex items-center text-lg font-medium">
+            <div className="flex items-center text-lg font-medium justify-center md:justify-start">
               <FaFacebookF className="text-gray-700 mr-2" />
               <p className="text-gray-700">srirahayusilver</p>
             </div>
@@ -67,8 +68,8 @@ const ContactUs = () => {
       </div>
 
       {/* Map Section */}
-      <div className="mt-10 mx-[200px] rounded-xl mb-6">
-        <iframe width="100%" height="600" src="https://www.google.com/maps?q=-8.535317090224558,115.21206467613822&z=15&output=embed" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <div className="mt-10 px-4 md:px-20 lg:px-40 xl:px-60 rounded-xl mb-6">
+        <iframe width="100%" height="400" src="https://www.google.com/maps?q=-8.535317090224558,115.21206467613822&z=15&output=embed" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </>
   );

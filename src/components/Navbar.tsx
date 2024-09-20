@@ -64,7 +64,7 @@ const Navbar = () => {
     <div className={`fixed top-0 z-50 w-full transition-colors duration-300 ${isScrolled ? 'bg-white shadow-lg text-black' : 'bg-gray-600 text-white'}`}>
       <div className="container mx-auto flex items-center justify-between h-[100px] px-4 md:px-6 lg:px-8">
         <div className="flex items-center gap-2">
-          <p className="text-2xl md:text-3xl font-bold font-playfair">Sri Rahayu Silver</p>
+          <p className="text-xl md:text-3xl font-bold font-playfair">Sri Rahayu Silver</p>
         </div>
 
         <div className="hidden lg:flex items-center gap-x-6">
@@ -102,7 +102,7 @@ const Navbar = () => {
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value as LanguageType)} // Gunakan casting
-            className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer"
+            className="px-2 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer"
           >
             <option value="en">English</option>
             <option value="id">Indonesia</option>

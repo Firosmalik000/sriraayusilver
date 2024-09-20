@@ -35,8 +35,8 @@ const AboutUs = () => {
   return (
     <div className="pt-[200px] pb-10 flex flex-col md:flex-row items-center justify-center gap-12">
       <div className="flex flex-col w-[300px] gap-4">
-        <p className="font-playfair text-4xl font-semibold text-end">{content[language].title}</p>
-        <p className="text-gray-700 text-end">{content[language].description}</p>
+        <p className="font-playfair text-4xl font-semibold text-center md:text-end">{content[language].title}</p>
+        <p className="text-gray-700 text-justify">{content[language].description}</p>
       </div>
       <div className="flex justify-center">
         <img src={AboutJpg} className="w-[300px] rounded-lg shadow-lg" alt="About Sri Rahayu Silver" />
