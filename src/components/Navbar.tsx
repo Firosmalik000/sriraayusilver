@@ -24,35 +24,35 @@ const Navbar = () => {
     en: {
       home: 'Home',
       about_us: 'About Us',
-      tour: 'Tour',
+      package: 'Package',
       gallery: 'Gallery',
       contact_us: 'Contact Us',
     },
     id: {
       home: 'Beranda',
       about_us: 'Tentang Kami',
-      tour: 'Tur',
+      package: 'Paket',
       gallery: 'Galeri',
       contact_us: 'Kontak Kami',
     },
     zh: {
       home: '首页',
       about_us: '关于我们',
-      tour: '旅游',
+      package: '套餐',
       gallery: '画廊',
       contact_us: '联系我们',
     },
     jp: {
       home: 'ホーム',
       about_us: '私たちについて',
-      tour: 'ツアー',
+      package: 'パッケージ',
       gallery: 'ギャラリー',
       contact_us: 'お問い合わせ',
     },
     ko: {
       home: '홈',
       about_us: '소개',
-      tour: '투어',
+      package: '패키지',
       gallery: '갤러리',
       contact_us: '연락처',
     },
@@ -87,8 +87,8 @@ const Navbar = () => {
           <Link to="/about-us">
             <div className={classOptionNav}>{texts[language].about_us}</div>
           </Link>
-          <Link to="/tour">
-            <div className={classOptionNav}>{texts[language].tour}</div>
+          <Link to="/package">
+            <div className={classOptionNav}>{texts[language].package}</div>
           </Link>
           <Link to="/gallery">
             <div className={classOptionNav}>{texts[language].gallery}</div>
@@ -99,11 +99,7 @@ const Navbar = () => {
         </div>
 
         <div className="lg:hidden items-center gap-x-4">
-          <select
-            value={language}
-            onChange={(e) => setLanguage(e.target.value as LanguageType)} // Gunakan casting
-            className="px-2 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer"
-          >
+          <select value={language} onChange={(e) => setLanguage(e.target.value as LanguageType)} className="px-2 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer">
             <option value="en">English</option>
             <option value="id">Indonesia</option>
             <option value="zh">中文</option>
@@ -132,8 +128,8 @@ const Navbar = () => {
           <Link to="/about-us">
             <button onClick={() => setIsMenuOpen(false)}>{texts[language].about_us}</button>
           </Link>
-          <Link to="/tour">
-            <button onClick={() => setIsMenuOpen(false)}>{texts[language].tour}</button>
+          <Link to="/package">
+            <button onClick={() => setIsMenuOpen(false)}>{texts[language].package}</button>
           </Link>
           <Link to="/gallery">
             <button onClick={() => setIsMenuOpen(false)}>{texts[language].gallery}</button>
