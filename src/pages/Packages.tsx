@@ -2,7 +2,7 @@ import HomePackage from '../components/fragments/HomePackage';
 
 const Packages = () => {
   return (
-    <div className="pt-[150px]">
+    <div className="pt-[100px]">
       <HomePackage />
     </div>
   );

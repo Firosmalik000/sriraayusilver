@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
+import Pa from '../../img/p2.jpg';
 
 const HomePackage = () => {
   const packages = [
     {
-      id: 'traditional', // Ini akan menjadi id untuk routing
+      id: 'traditional',
       title: 'Traditional Silver Class',
       price: 'IDR 500.000/person',
-      imageSrc: '',
+      imageSrc: Pa,
       imageAlt: 'Traditional Silver Class',
     },
-    // Tambahkan package lainnya di sini
   ];
 
   return (
@@ -19,8 +19,8 @@ const HomePackage = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {packages.map((pkg, index) => (
-          <div key={index} className="h-[300px] w-full border rounded-lg shadow-md overflow-hidden bg-white transform hover:scale-105 transition-transform duration-300">
-            <img src={pkg.imageSrc} alt={pkg.imageAlt} className="h-[160px] w-full object-cover mb-4" />
+          <div key={index} className="h-[350px] w-full border rounded-lg shadow-md overflow-hidden bg-white transform hover:scale-105 transition-transform duration-300">
+            <img src={pkg.imageSrc} alt={pkg.imageAlt} className="h-[230px] w-full object-cover " />
             <div className="flex flex-col gap-2 px-4 py-2 border-t">
               <p className="text-center font-semibold text-lg text-gray-700">{pkg.title}</p>
               <p className="text-center text-sm text-gray-600">{pkg.price}</p>
