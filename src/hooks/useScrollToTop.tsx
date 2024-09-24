@@ -5,8 +5,8 @@ const useScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll ke atas
-  }, [pathname]); // Berjalan setiap pathname berubah
+    window.scrollTo(0, 0);
+  }, [pathname]);
 };
 
 export default useScrollToTop;

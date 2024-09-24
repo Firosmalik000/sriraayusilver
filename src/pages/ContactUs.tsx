@@ -69,8 +69,15 @@ const ContactUs = () => {
 
       {/* Map Section */}
       <div className="mt-10 px-4 md:px-20 lg:px-40 xl:px-60 rounded-xl mb-6">
-        <iframe width="100%" height="400" src="https://www.google.com/maps?q=-8.535317090224558,115.21206467613822&z=15&output=embed" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.341523280116!2d115.23981849999998!3d-8.4661314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd222e084668957%3A0xf413379de640c8b9!2sSri%20Rahayu%20Silver%20(Silver%20Class%20and%20Jewerly)!5e0!3m2!1sen!2sid!4v1727090472401!5m2!1sen!2sid"
+          width="100%"
+          height="600"
+          style={{ border: 0 }}
+          loading="lazy"
+        ></iframe>
       </div>
+      {/* Map Section */}
     </>
   );
 };

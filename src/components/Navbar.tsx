@@ -4,7 +4,7 @@ import { FaTimes } from 'react-icons/fa';
 import { IoMenuSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-type LanguageType = 'en' | 'id' | 'zh' | 'jp' | 'ko'; // Definisikan tipe
+type LanguageType = 'en' | 'id' | 'zh' | 'jp' | 'ko'; 
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="items-center gap-x-4">
             <select
               value={language}
-              onChange={(e) => setLanguage(e.target.value as LanguageType)} // Gunakan casting
+              onChange={(e) => setLanguage(e.target.value as LanguageType)} 
               className="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 cursor-pointer"
             >
               <option value="en">English</option>
